@@ -10,6 +10,10 @@ fi
     ## Set go path (for development with go)
     export GOPATH="$HOME/go"
 
+    ## Set path for Node Version Manager
+    export NVM_DIR="$HOME/.nvm"
+    source "$(brew --prefix nvm)/nvm.sh"
+
     ## Add ruby vm bin to PATH (for development with ruby)
     export PATH="$PATH:$HOME/.rvm/bin"
 
@@ -51,5 +55,5 @@ export EDITOR=/usr/bin/vim
 
 # Specify the preferred prompt (git prompt integration)
 export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1='================================================================================\n| $(uname) \w$(__git_ps1 " (%s)")\n| => '
-export PS2='| => '
+export PS1='================================================================================\n| $(uname) \w$(__git_ps1 " (%s)")\n| ~> '
+export PS2='| ~> '
